@@ -23,9 +23,7 @@ print("\nThe coverage file should not contain any header")
 file = input("\nGive the path of the coverage file \t:\t") ## Give the file path here, it should not contain any headder
 df = pd.read_csv(file, sep="\t")
 np_df = np.array(df)
-np_cov_sum = sum(np_df[:,2])
-np_cov_count = len(np_df[:,2])
-avg_coverage = np_cov_sum/np_cov_count
+avg_coverage = np.mean(np_df[:,2])
 
 print("\n" "The average/mean coverage of the sample is",str(avg_coverage) + "x")
 print("\nThe rounded average/mean coverage of the sample is",str(round(avg_coverage)) + "x")
